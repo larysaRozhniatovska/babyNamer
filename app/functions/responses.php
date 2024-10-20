@@ -6,9 +6,19 @@
  * @param string $template
  */
 
-function render(string $page, string $template = VIEWS_TEMPLATE_MAIN): void
+function render(string $page,array $data = [], string $template = VIEWS_TEMPLATE_MAIN): void
 {
-//, array $data = []){
-//    extract($data);
+    extract($data);
     include_once VIEWS_TEMPLATES_DIR . $template . '.php';
+}
+
+
+/**
+ * Redirect to specify url
+ * @param string $url
+ */
+function redirect(string $url) : never
+{
+    header('Location: ' . $url);
+    exit();
 }
