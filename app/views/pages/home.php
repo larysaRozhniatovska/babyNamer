@@ -1,4 +1,4 @@
-<form action="/include/loading_form.php" method="post">
+<form action="/process.php" method="post">
     <div class="form-row">
         <div class="form-column">
             <label for="babyName">Enter the baby's name</label>
@@ -14,7 +14,18 @@
                 <input type="radio" id="boy" name="gender" value="boy" />
                 <label for="boy">boy</label>
             </div>
+            <div>
+                <input type="radio" id="boy1" name="gender" value="boy1" />
+                <label for="boy1">boy1</label>
+            </div>
         </fieldset>
     </div>
     <button type="submit">Add</button>
 </form>
+<?php if (!empty($errors)): ?>
+    <ul>
+        <?php foreach ($errors as $error): ?>
+            <li><?= $error; ?></li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>

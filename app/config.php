@@ -10,6 +10,15 @@ const VIEWS_TEMPLATES_DIR = VIEWS_DIR . 'templates' . DIRECTORY_SEPARATOR;
 const VIEWS_COMMON_DIR = VIEWS_DIR . 'common' . DIRECTORY_SEPARATOR;
 const VIEWS_PAGES_DIR = VIEWS_DIR . 'pages' . DIRECTORY_SEPARATOR;
 
+//css all parameters================================================================
+const CSS_DIR = 'css' . DIRECTORY_SEPARATOR;
+
+
 //FUNCTIONS all parameters================================================================
 const FUNCTIONS_DIR = APP_DIR . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR;
 const STORAGE_NAMES_FILE = APP_DIR . 'storage' . DIRECTORY_SEPARATOR . 'names.json';
+
+const OPTIONS_ERROR = [
+    'babyName' => 'required,minLen:3',
+    'gender' => 'required,gender',
+];
