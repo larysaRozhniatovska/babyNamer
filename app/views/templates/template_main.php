@@ -6,6 +6,7 @@
                   content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
             <title><?= $page?><?= TEXT_SITE_NAME?></title>
+            <link rel="stylesheet" href="<?=CSS_DIR . 'styles.css'?>">
     </head>
     <body>
         <?php include_once VIEWS_COMMON_DIR . 'header.php'?>
