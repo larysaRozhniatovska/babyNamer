@@ -1,40 +1,39 @@
 <?php
+/**
+ * @return void
+ */
 function home()
 {
-//    $names = getNames();
-//    $girlsSize = count($names['girls']);
-//    $boysSize = count($names['boys']);
-//    if ($girlsSize > $boysSize) {
-//        $size = $girlsSize;
-//    } else {
-//        $size = $boysSize;
-//    }
+    $names = getNames();
+    $girlsSize = count($names['girl']);
+    $boysSize = count($names['boy']);
+    $size = max($girlsSize, $boysSize);
     $errors = getErrors();
     render('home' , [
+        'names' => $names,
+        'size' => $size,
         'errors' => $errors
     ]);
-//    render('home', [
-//        'names' => $names,
-//        'size' => $size,
-//    ]);
 }
 
+/**
+ * data reading, validation and saving
+ * Redirect to /index.php
+ * @return void
+ */
 function process()
 {
-//    $names = getNames();
     $data = [
         'babyName' => htmlspecialchars(filter_input(INPUT_POST,'babyName')),
         'gender' => htmlspecialchars(filter_input(INPUT_POST,'gender')),
     ];
-    //validations
     $errors = validateData($data, OPTIONS_ERROR);
     if (empty($errors)) {
-//        writeData($data,'../data.json');
+        $names = getNames();
+        $names[ $data['gender']][] =  $data['babyName'];
+        setNames($names);
     } else {
         setErrors($errors);
     }
-
-//    $names[$gender][] = $name;
-//    setNames($names);
     redirect('/index.php');
 }

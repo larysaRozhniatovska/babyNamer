@@ -19,6 +19,6 @@ const FUNCTIONS_DIR = APP_DIR . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SE
 const STORAGE_NAMES_FILE = APP_DIR . 'storage' . DIRECTORY_SEPARATOR . 'names.json';
 
 const OPTIONS_ERROR = [
-    'babyName' => 'required,minLen:3',
+    'babyName' => 'minLen:3',
     'gender' => 'required,gender',
 ];
