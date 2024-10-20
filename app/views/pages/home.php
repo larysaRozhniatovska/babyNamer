@@ -14,10 +14,6 @@
                 <input type="radio" id="boy" name="gender" value="boy" />
                 <label for="boy">boy</label>
             </div>
-            <div>
-                <input type="radio" id="boy1" name="gender" value="boy1" />
-                <label for="boy1">boy1</label>
-            </div>
         </fieldset>
     </div>
     <button type="submit">Add</button>
