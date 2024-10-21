@@ -5,7 +5,6 @@
  * @param array $data
  * @param string $template
  */
-
 function render(string $page,array $data = [], string $template = VIEWS_TEMPLATE_MAIN): void
 {
     extract($data);

@@ -1,5 +1,6 @@
 <?php
 /**
+ * transferring data to the page and displaying HOME
  * @return void
  */
 function home()
